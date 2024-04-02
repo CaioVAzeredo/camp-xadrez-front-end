@@ -1,0 +1,7 @@
+.podium {
+    
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
