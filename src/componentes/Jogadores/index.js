@@ -7,6 +7,18 @@ const Jogadores = (props) => {
             <div className='infoJogador' > 
             <p className='nomeJogador'>Nome do Jogador</p> <p className='ptsJogador'>pts</p>
             </div>
+            <div className='infoJogador' > 
+            <p className='nomeJogador'>Nome do Jogador</p> <p className='ptsJogador'>pts</p>
+            </div>
+            <div className='infoJogador' > 
+            <p className='nomeJogador'>Nome do Jogador</p> <p className='ptsJogador'>pts</p>
+            </div>
+            <div className='infoJogador' > 
+            <p className='nomeJogador'>Nome do Jogador</p> <p className='ptsJogador'>pts</p>
+            </div>
+            <div className='infoJogador' > 
+            <p className='nomeJogador'>Nome do Jogador</p> <p className='ptsJogador'>pts</p>
+            </div>
         </section>
     )
 }

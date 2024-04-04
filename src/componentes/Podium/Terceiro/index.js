@@ -3,9 +3,9 @@ import './Terceiro.css'
 const Terceiro = (props) => {
     return (
         <div className="terceiro">
-            <h1>Terceiro</h1>
+            <h1>{props.nome}</h1>
             <img src="/imagens/terceiro.png" alt="imagem de terceiro lugar" />
-            <p className='ptsTerceiro'>pts</p>
+            <p className='ptsTerceiro'>{props.pts}</p>
         </div>
     )
 }
