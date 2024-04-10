@@ -128,6 +128,7 @@ function App() {
     top3.push(alunos[i])
   }
 
+
   /* FILTRO DOS JOGADORES */
   /* ----------------------------------------- */
   const topRestante = []
@@ -143,7 +144,7 @@ function App() {
 
   return (
     <div>
-      <Podium nome={alunos.nome} ponto={alunos.ponto}/>
+      <Podium data={top3} />
       <h2> JOGADORES </h2>
       {topRestante.map(aluno => jogadores(aluno))}
     </div>
