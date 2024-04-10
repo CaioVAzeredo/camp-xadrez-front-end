@@ -136,9 +136,6 @@ function App() {
   }
   /* ----------------------------------------- */
 
-  const TOP3 = (aluno) => {
-    return <Podium nome={aluno.nome} ponto={aluno.ponto}/>
-  }
 
   const jogadores = (aluno) => {
     return <Jogadores key={aluno.id} nome={aluno.nome} pontos={aluno.ponto} />
@@ -146,7 +143,7 @@ function App() {
 
   return (
     <div>
-      {top3.map(aluno => TOP3(aluno))}
+      <Podium nome={alunos.nome} ponto={alunos.ponto}/>
       <h2> JOGADORES </h2>
       {topRestante.map(aluno => jogadores(aluno))}
     </div>
