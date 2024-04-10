@@ -3,8 +3,10 @@ import Primeiro from './Primeiro'
 import Segundo from './Segundo'
 import Terceiro from './Terceiro'
 
-const Podium = () => {
+const Podium = (props) => {
+
     
+
     const primeiro = 'Caio'
     const ptsPrimeiro = 30
     const segundo = 'Pedro'
@@ -13,7 +15,7 @@ const Podium = () => {
     const ptsTerceiro = 20
 
     return (
-        <section className='podium'>
+        <section className='podium' >
 
             <Segundo nome={segundo} pts={ptsSegundo} />
 
