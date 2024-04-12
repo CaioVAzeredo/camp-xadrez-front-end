@@ -2,10 +2,16 @@
     display: flex;
     justify-content: center;
 }
-.nomeJogador{
-    margin-right: 100px;
+
+.nomeJogador {
+    width: 300px;
+    text-align: center;
 }
 
+.ptsJogador .indice {
+    width: 30px;
+    text-align: center;
+}
 
 h2 {
     text-align: center;
