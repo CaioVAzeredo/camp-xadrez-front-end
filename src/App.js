@@ -1,5 +1,4 @@
-import Jogadores from "./componentes/Jogadores";
-import Podium from "./componentes/Podium/Podium";
+import Formulario from "./componentes/Formulario";
 
 function App() {
   const alunos = [
@@ -128,7 +127,6 @@ function App() {
     top3.push(alunos[i])
   }
 
-
   /* FILTRO DOS JOGADORES */
   /* ----------------------------------------- */
   const topRestante = []
@@ -137,16 +135,9 @@ function App() {
   }
   /* ----------------------------------------- */
 
-
-  const jogadores = (aluno) => {
-    return <Jogadores key={aluno.id} nome={aluno.nome} pontos={aluno.ponto} />
-  }
-
   return (
     <div>
-      <Podium data={top3} />
-      <h2> JOGADORES </h2>
-      {topRestante.map(aluno => jogadores(aluno))}
+      <Formulario podium={top3} topRestante ={topRestante}/>
     </div>
   );
 }
