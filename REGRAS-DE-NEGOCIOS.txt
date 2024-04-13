@@ -1,0 +1,15 @@
+- puxa info da api. 
+
+- botao para editar os pontos dos jogadores.
+
+- botao para atualizar a pagina.
+
+-----------------------------------------------------------------------------------------------------------
+
+- icone hamburger para configurações. (logout ou login, info com foto de quem fez o login, adicionar jogador)
+
+- Página de login para poder modificar as informações dos jogadores. (form)
+
+- Página para adicionar jogador. (form)
+
+- Pagina principal é a index com o objetivo dos alunos entrarem para ver seu rank(sem acesso as funções de edição e adição ou remoção de alunos) 

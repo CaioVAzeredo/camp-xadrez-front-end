@@ -2,11 +2,14 @@
     display: flex;
     justify-content: center;
     background-color: #F2F2F2;
-
 }
 
 .divJogadores {
     width: auto;
     margin: auto;
+}
 
+.botoes {
+    display: flex;
+    justify-content: center;
 }
