@@ -13,3 +13,22 @@
     display: flex;
     justify-content: center;
 }
+
+.botaoAtualiza {
+    background-color: #f76262;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 32px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin: 32px;
+    float: left;
+    width: 101px;
+}
+
+.botaoAtualiza:hover {
+    color: #ffffff;
+    background-color: #c83e3e;
+}

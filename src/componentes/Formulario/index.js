@@ -8,12 +8,14 @@ const Formulario = (props) => {
 
     const aoSalvar = (e) => {
         e.preventDefault()
+        console.log('salvou')
     }
-    /* 
-        const aoAtualizar = (e) => {
-            console.log('atualizado')
-            window.location.reload();
-        } */
+
+    const aoAtualizar = () => {
+        window.location.reload();
+        console.log('atualizado')
+    }
+
     return (
         <div className='formulario'>
             < form onSubmit={aoSalvar} className='form'>
@@ -23,7 +25,8 @@ const Formulario = (props) => {
                     {props.topRestante.map((aluno, i) => <Jogadores key={aluno.id} nome={aluno.nome} pontos={aluno.ponto} indice={i} />)}
                 </div>
                 <div className='botoes' >
-                    <Botao texto={'Atualizar'} />
+                    <Botao texto={'EDITAR'} />
+                    <div className='botaoAtualiza' onClick={aoAtualizar}>ATUALIZAR</div>
                 </div>
             </form >
         </div>
