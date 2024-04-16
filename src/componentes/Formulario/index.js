@@ -1,33 +1,24 @@
-import Botao from '../Botao'
 import Jogadores from '../Jogadores'
 import Podium from '../Podium/Podium'
 import './Formulario.css'
 
 
-const Formulario = (props) => {
+const Formulario = ({ top3, topRestante, aoDeletar, aoEditar }) => {
 
-    const aoSalvar = (e) => {
-        e.preventDefault()
-        console.log('salvou')
-    }
 
-    const aoAtualizar = () => {
-        window.location.reload();
-        console.log('atualizado')
-    }
 
     return (
         <div className='formulario'>
-            < form onSubmit={aoSalvar} className='form'>
-                <Podium data={props.podium} />
+            < form className='form'>
+                <Podium top3={top3} aoDeletar={aoDeletar} aoEditar={aoEditar} />
                 <h2 > JOGADORES </h2>
                 <div className='divJogadores'>
-                    {props.topRestante.map((aluno, i) => <Jogadores key={aluno.id} nome={aluno.nome} pontos={aluno.ponto} indice={i} />)}
+                    {topRestante.map((aluno, i) => <Jogadores key={aluno.id} nome={aluno.nome} ponto={aluno.ponto} indice={i} aoDeletar={aoDeletar} aoEditar={aoEditar} />)}
                 </div>
-                <div className='botoes' >
+                {/* <div className='botoes' >
                     <Botao texto={'EDITAR'} />
                     <div className='botaoAtualiza' onClick={aoAtualizar}>ATUALIZAR</div>
-                </div>
+                </div> */}
             </form >
         </div>
     )

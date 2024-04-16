@@ -12,4 +12,4 @@
 
 - Página para adicionar jogador. (form)
 
-- Pagina principal é a index com o objetivo dos alunos entrarem para ver seu rank(sem acesso as funções de edição e adição ou remoção de alunos) 
+- Pagina principal é a index com o objetivo dos alunos entrarem para ver seu rank(sem acesso as funções de edição e adição ou remoção de alunos)

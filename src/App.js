@@ -130,17 +130,22 @@ function App() {
   /* FILTRO DOS JOGADORES */
   /* ----------------------------------------- */
   const topRestante = []
-  
+
   for (let i = 3; i < alunos.length; i++) {
     topRestante.push(alunos[i])
-    
   }
 
   /* ----------------------------------------- */
-  
+  const deletarColaborador = () => {
+    alert('ESCLUIU')
+  }
+
+  const editarColaborador = () => {
+    alert('EDITAR')
+  }
   return (
     <div>
-      <Formulario podium={top3} topRestante={topRestante}/>
+      <Formulario top3={top3} topRestante={topRestante} aoDeletar={deletarColaborador} aoEditar={editarColaborador} />
     </div>
   );
 }
