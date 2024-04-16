@@ -10,7 +10,7 @@ const Jogadores = ({ nome, ponto, indice, aoDeletar, aoEditar }) => {
             <div className='infoJogador' >
                 <p className='indice'>{indice + 4}°</p>
                 <p className='nomeJogador'>{nome}</p> <p className='ptsJogador'>{ponto}</p>
-                <RiDeleteBin2Fill size={25} onClick={aoDeletar} /> <FaPen onClick={aoEditar} />
+                <RiDeleteBin2Fill size={25} onClick={aoDeletar} className="delJogadores"/> <FaPen onClick={aoEditar} className="editJogadores"/>
             </div>
 
         </section>

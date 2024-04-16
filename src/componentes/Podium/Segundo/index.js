@@ -6,7 +6,7 @@ const Segundo = ({ nome, ponto, aoDeletar, aoEditar }) => {
     return (
         <div className="segundo" >
 
-            <h1>{nome}</h1> <RiDeleteBin2Fill size={25} onClick={aoDeletar} /> <FaPen onClick={aoEditar}/>
+            <h1>{nome} <RiDeleteBin2Fill size={25} onClick={aoDeletar} className="delPodium"/> <FaPen className="editPodium" onClick={aoEditar}/></h1>
             <img src="/imagens/segundo.png" alt="imagem de segundo lugar" />
             <p className='ptsSegundo'>{ponto}</p>
         </div>

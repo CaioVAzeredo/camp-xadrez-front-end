@@ -5,3 +5,13 @@
     flex-direction: row;
     justify-content: center;
 }
+.delPodium{
+    margin: 0px 0px 0px 100px;
+    width: 50px;
+    text-align: center;
+}
+.editPodium{
+    margin: 0px 10px 0px 0px;
+    width: 30px;
+    text-align: center;
+}

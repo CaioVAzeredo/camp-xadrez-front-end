@@ -8,11 +8,22 @@
     text-align: center;
 }
 
-.ptsJogador .indice {
+.ptsJogador .indice .del .edit{
     width: 30px;
     text-align: center;
 }
 
 h2 {
+    text-align: center;
+}
+
+.delJogadores{
+    margin: 15px 0px 0px 5px;
+    width: 50px;
+    text-align: center;
+}
+.editJogadores{
+    margin: 20px 10px 0px 10px;
+    width: 30px;
     text-align: center;
 }

@@ -5,8 +5,6 @@ import './Formulario.css'
 
 const Formulario = ({ top3, topRestante, aoDeletar, aoEditar }) => {
 
-
-
     return (
         <div className='formulario'>
             < form className='form'>
