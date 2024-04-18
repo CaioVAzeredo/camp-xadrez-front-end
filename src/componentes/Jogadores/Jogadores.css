@@ -1,6 +1,7 @@
 .infoJogador {
     display: flex;
     justify-content: center;
+    margin: 0px 0px 0px 100px;
 }
 
 .nomeJogador {
@@ -8,7 +9,7 @@
     text-align: center;
 }
 
-.ptsJogador .indice .del .edit{
+.ptsJogador .indice .del .edit {
     width: 30px;
     text-align: center;
 }
@@ -17,13 +18,16 @@ h2 {
     text-align: center;
 }
 
-.delJogadores{
+.delJogadores {
     margin: 15px 0px 0px 5px;
     width: 50px;
     text-align: center;
 }
-.editJogadores{
+
+
+.editJogadores {
     margin: 20px 10px 0px 10px;
     width: 30px;
     text-align: center;
 }
+

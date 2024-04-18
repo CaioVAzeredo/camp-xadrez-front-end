@@ -32,3 +32,10 @@
     color: #ffffff;
     background-color: #c83e3e;
 }
+.delJogadores:hover {
+    cursor: pointer;
+}
+
+.editJogadores:hover {
+    cursor: pointer;
+}

@@ -8,9 +8,9 @@ const Jogadores = ({ nome, ponto, indice, aoDeletar, aoEditar }) => {
     return (
         <section>
             <div className='infoJogador' >
-                <p className='indice'>{indice + 4}°</p>
+                <p cla ssName='indice'>{indice + 4}°</p>
                 <p className='nomeJogador'>{nome}</p> <p className='ptsJogador'>{ponto}</p>
-                <RiDeleteBin2Fill size={25} onClick={aoDeletar} className="delJogadores"/> <FaPen onClick={aoEditar} className="editJogadores"/>
+                <RiDeleteBin2Fill size={25} onClick={aoDeletar} className="delJogadores" /> <FaPen onClick={aoEditar} className="editJogadores" />
             </div>
 
         </section>
