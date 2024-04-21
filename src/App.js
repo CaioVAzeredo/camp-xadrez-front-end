@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Formulario from "./componentes/Formulario";
 
 function App() {
-  const alunos = [
+  const [alunos, setAlunos] = useState([
 
     {
       "id": 11,
@@ -109,7 +110,7 @@ function App() {
       "createdAt": "2024-02-23T00:05:45.462Z",
       "updatedAt": "2024-02-24T17:22:15.272Z"
     },
-  ]
+  ])
 
   /* FUNÇÃO DE ORDENAR QUE SERÁ FEITO PELA API */
   /* ----------------------------------------- */
@@ -136,8 +137,8 @@ function App() {
   }
 
   /* ----------------------------------------- */
-  const deletarColaborador = () => {
-    alert('ESCLUIU')
+  const deletarColaborador = (id) => {
+    console.log('DELETADO', id)
   }
 
   const editarColaborador = () => {
