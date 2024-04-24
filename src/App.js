@@ -2,7 +2,7 @@ import { useState } from "react";
 import Formulario from "./componentes/Formulario";
 
 function App() {
-  const alunos = [
+  const [alunos, setAlunos] = useState([
 
     {
       "id": 11,
@@ -110,7 +110,7 @@ function App() {
       "createdAt": "2024-02-23T00:05:45.462Z",
       "updatedAt": "2024-02-24T17:22:15.272Z"
     },
-  ]
+  ])
 
 
   /* ------------------FUNÇÃO DE ORDENAR QUE SERÁ FEITO PELA API----------------------- */
@@ -143,10 +143,9 @@ function App() {
     topRestante.push(alunos[i])
   }
 
-  /* ------------------DELETAR JOGADORES RESTANTE----------------------- */
-  const aoDeletearTopRestante = (id) => {
-    console.log(topRestante.filter(aluno => aluno.id == id), topRestante)
-
+  /* ----------------------------------------- */
+  const deletarColaborador = () => {
+    alert('ESCLUIU')
   }
 
   const editarColaborador = () => {
@@ -160,3 +159,55 @@ function App() {
 }
 
 export default App;
+
+/*Consumindo API 
+
+import './App.css';
+import { useState } from 'react';
+
+function App() {
+  const [endereco, setEndereco] = useState({})
+
+  function manipularEndereco(evento) {
+    const cep = evento.target.value
+    setEndereco({
+      cep
+    })
+
+    if (cep && cep.length === 8) {
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(resposta => resposta.json())
+        .then(dados => {
+          setEndereco({
+            cep: dados.cep,
+            rua: dados.logradouro,
+            bairro: dados.bairro,
+            cidade: dados.localidade,
+            estado: dados.uf,
+          })
+        })
+    }
+
+
+    
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <input placeholder='Digite o cep' onChange={manipularEndereco} />
+        <ul>
+        <li>CEP: {endereco.cep}</li>
+        <li>rua: {endereco.rua}</li>
+        <li>bairro: {endereco.bairro}</li>
+        <li>cidade: {endereco.cidade}</li>
+        <li>estado: {endereco.estado}</li>
+
+        </ul>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+ */

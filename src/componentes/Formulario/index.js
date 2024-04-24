@@ -13,10 +13,6 @@ const Formulario = ({ top3, topRestante, aoDeletearTopRestante, aoDeletarTop3, a
                 <div className='divJogadores'>
                     {topRestante.map((aluno, i) => <Jogadores key={aluno.id} nome={aluno.nome} ponto={aluno.ponto} indice={i} aoDeletearTopRestante={aoDeletearTopRestante} aoEditar={aoEditar} />)}
                 </div>
-                {/* <div className='botoes' >
-                    <Botao texto={'EDITAR'} />
-                    <div className='botaoAtualiza' onClick={aoAtualizar}>ATUALIZAR</div>
-                </div> */}
             </form >
         </div>
     )
