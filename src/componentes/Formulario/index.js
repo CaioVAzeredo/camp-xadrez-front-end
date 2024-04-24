@@ -3,15 +3,15 @@ import Podium from '../Podium/Podium'
 import './Formulario.css'
 
 
-const Formulario = ({ top3, topRestante, aoDeletar, aoEditar }) => {
+const Formulario = ({ top3, topRestante, aoDeletearTopRestante, aoDeletarTop3, aoEditar }) => {
 
     return (
         <div className='formulario'>
             < form className='form'>
-                <Podium top3={top3} aoDeletar={aoDeletar} aoEditar={aoEditar} />
+                <Podium top3={top3} aoDeletarTop3={aoDeletarTop3} aoEditar={aoEditar} />
                 <h2 > JOGADORES </h2>
                 <div className='divJogadores'>
-                    {topRestante.map((aluno, i) => <Jogadores key={aluno.id} nome={aluno.nome} ponto={aluno.ponto} indice={i} aoDeletar={aoDeletar} aoEditar={aoEditar} />)}
+                    {topRestante.map((aluno, i) => <Jogadores key={aluno.id} nome={aluno.nome} ponto={aluno.ponto} indice={i} aoDeletearTopRestante={aoDeletearTopRestante} aoEditar={aoEditar} />)}
                 </div>
                 {/* <div className='botoes' >
                     <Botao texto={'EDITAR'} />

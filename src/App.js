@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Formulario from "./componentes/Formulario";
 
 function App() {
@@ -111,33 +112,41 @@ function App() {
     },
   ]
 
-  /* FUNÇÃO DE ORDENAR QUE SERÁ FEITO PELA API */
-  /* ----------------------------------------- */
+
+  /* ------------------FUNÇÃO DE ORDENAR QUE SERÁ FEITO PELA API----------------------- */
   const comparePontos = (a, b) => {
     return b.ponto - a.ponto;
   }
   alunos.sort(comparePontos)
-  /* ----------------------------------------- */
 
-  /* FILTRAR DO TOP3  */
-  /* ----------------------------------------- */
 
-  const top3 = []
+
+  /* ------------------FILTRAR DO TOP3----------------------- */
+
+  const [top3, setTop3] = useState([])
   for (let i = 0; i < 3; i++) {
     top3.push(alunos[i])
   }
+  /* -----------------DELETAR TOP3------------------------ */
+  const aoDeletarTop3 = (id) => {
+    setTop3(alunos.filter(aluno => aluno.id !== id), top3)
+  }
 
-  /* FILTRO DOS JOGADORES */
-  /* ----------------------------------------- */
-  const topRestante = []
+
+  /* ----------------------------------------------------------------- */
+
+
+  /* --------------------FILTRO DOS JOGADORES--------------------- */
+  const [topRestante, setTopRestante] = useState([])
 
   for (let i = 3; i < alunos.length; i++) {
     topRestante.push(alunos[i])
   }
 
-  /* ----------------------------------------- */
-  const deletarColaborador = () => {
-    alert('ESCLUIU')
+  /* ------------------DELETAR JOGADORES RESTANTE----------------------- */
+  const aoDeletearTopRestante = (id) => {
+    console.log(topRestante.filter(aluno => aluno.id == id), topRestante)
+
   }
 
   const editarColaborador = () => {
@@ -145,7 +154,7 @@ function App() {
   }
   return (
     <div>
-      <Formulario top3={top3} topRestante={topRestante} aoDeletar={deletarColaborador} aoEditar={editarColaborador} />
+      <Formulario top3={top3} topRestante={topRestante} aoDeletearTopRestante={aoDeletearTopRestante} aoDeletarTop3={aoDeletarTop3} aoEditar={editarColaborador} />
     </div>
   );
 }
