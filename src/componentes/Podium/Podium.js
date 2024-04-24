@@ -3,7 +3,7 @@ import Primeiro from './Primeiro'
 import Segundo from './Segundo'
 import Terceiro from './Terceiro'
 
-const Podium = ({ top3, aoDeletar, aoEditar }) => {
+const Podium = ({ top3, aoDeletarTop3, aoEditar }) => {
 
     return (
         <section className='podium' >

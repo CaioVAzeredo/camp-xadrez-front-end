@@ -112,32 +112,45 @@ function App() {
     },
   ])
 
-  /* FUNÇÃO DE ORDENAR QUE SERÁ FEITO PELA API */
-  /* ----------------------------------------- */
+
+  /* ------------------FUNÇÃO DE ORDENAR QUE SERÁ FEITO PELA API----------------------- */
   const comparePontos = (a, b) => {
     return b.ponto - a.ponto;
   }
   alunos.sort(comparePontos)
-  /* ----------------------------------------- */
 
-  /* FILTRAR DO TOP3  */
-  /* ----------------------------------------- */
 
-  const top3 = []
+
+  /* ------------------FILTRAR DO TOP3----------------------- */
+
+  const [top3, setTop3] = useState([])
   for (let i = 0; i < 3; i++) {
     top3.push(alunos[i])
   }
+  /* -----------------DELETAR TOP3------------------------ */
+  const aoDeletarTop3 = (id) => {
+    setTop3(alunos.filter(aluno => aluno.id !== id), top3)
+  }
 
-  /* FILTRO DOS JOGADORES */
-  /* ----------------------------------------- */
-  const topRestante = []
+
+  /* ----------------------------------------------------------------- */
+
+
+  /* --------------------FILTRO DOS JOGADORES--------------------- */
+  const [topRestante, setTopRestante] = useState([])
 
   for (let i = 3; i < alunos.length; i++) {
     topRestante.push(alunos[i])
   }
 
+<<<<<<< HEAD
   const aoDeletar = (id) => {
     setAlunos(alunos.filter(aluno => aluno.id !== (id)))
+=======
+  /* ----------------------------------------- */
+  const deletarColaborador = () => {
+    alert('ESCLUIU')
+>>>>>>> e6ae8e810981c670d1daa0a8e0911a8a15430a53
   }
 
   const editarColaborador = () => {
@@ -145,7 +158,11 @@ function App() {
   }
   return (
     <div>
+<<<<<<< HEAD
       <Formulario top3={top3} topRestante={topRestante} aoDeletar={aoDeletar} aoEditar={editarColaborador} />
+=======
+      <Formulario top3={top3} topRestante={topRestante} aoDeletearTopRestante={aoDeletearTopRestante} aoDeletarTop3={aoDeletarTop3} aoEditar={editarColaborador} />
+>>>>>>> e6ae8e810981c670d1daa0a8e0911a8a15430a53
     </div>
   );
 }
