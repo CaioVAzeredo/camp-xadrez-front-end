@@ -136,9 +136,8 @@ function App() {
     topRestante.push(alunos[i])
   }
 
-  /* ----------------------------------------- */
-  const deletarColaborador = (id) => {
-    console.log('DELETADO', id)
+  const aoDeletar = (id) => {
+    setAlunos(alunos.filter(aluno => aluno.id !== (id)))
   }
 
   const editarColaborador = () => {
@@ -146,7 +145,7 @@ function App() {
   }
   return (
     <div>
-      <Formulario top3={top3} topRestante={topRestante} aoDeletar={deletarColaborador} aoEditar={editarColaborador} />
+      <Formulario top3={top3} topRestante={topRestante} aoDeletar={aoDeletar} aoEditar={editarColaborador} />
     </div>
   );
 }

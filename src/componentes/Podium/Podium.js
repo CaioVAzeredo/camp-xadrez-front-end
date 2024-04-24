@@ -8,11 +8,11 @@ const Podium = ({ top3, aoDeletar, aoEditar }) => {
     return (
         <section className='podium' >
 
-            <Segundo nome={top3[1].nome} ponto={top3[1].ponto} aoDeletar={aoDeletar} aoEditar={aoEditar} />
+            <Segundo nome={top3[1].nome} ponto={top3[1].ponto} aoDeletar={aoDeletar} aoEditar={aoEditar} id={top3[1].id}/>
 
-            <Primeiro nome={top3[0].nome} ponto={top3[0].ponto} aoDeletar={aoDeletar} aoEditar={aoEditar} aluno={top3} />
+            <Primeiro nome={top3[0].nome} ponto={top3[0].ponto} aoDeletar={aoDeletar} aoEditar={aoEditar} id={top3[0].id} />
 
-            <Terceiro nome={top3[2].nome} ponto={top3[2].ponto} aoDeletar={aoDeletar} aoEditar={aoEditar} />
+            <Terceiro nome={top3[2].nome} ponto={top3[2].ponto} aoDeletar={aoDeletar} aoEditar={aoEditar} id={top3[2].id}/>
 
         </section>
     )
