@@ -3,7 +3,7 @@ import Podium from '../Podium/Podium'
 import './Formulario.css'
 
 
-const Formulario = ({ top3, topRestante, aoDeletearTopRestante, aoDeletarTop3, aoEditar }) => {
+const Formulario = ({ top3, topRestante, aoDeletar, aoDeletarTop3, aoEditar }) => {
 
     return (
         <div className='formulario'>
