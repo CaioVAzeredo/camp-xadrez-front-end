@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,36 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Centraliza a tela inteira */
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Estiliza o container principal */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Estiliza cada aluno */
+.aluno {
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
 }

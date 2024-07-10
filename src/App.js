@@ -15,17 +15,16 @@ const AlunosList = () => {
     };
 
     fetchAlunos();
-  }, []); // A dependência vazia [] garante que o useEffect seja executado apenas uma vez, ao montar o componente
+  }, []); 
 
   return (
-    <div>
+    <div className='container'>
       <h1>Lista de Alunos</h1>
       <div>
         {alunos.map(aluno => (
           <div key={aluno.id} className="aluno">
             <h3>{aluno.nome}</h3>
             <p><strong>Ponto:</strong> {aluno.ponto}</p>
-            <p><strong>Curso:</strong> {aluno.curso}</p>
           </div>
         ))}
       </div>
