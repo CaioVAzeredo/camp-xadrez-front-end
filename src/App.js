@@ -10,7 +10,7 @@ const Api = () => {
         // Fetch data from the API on component mount
         const fetchData = async () => {
             try {
-                const resposta = await axios.get('http://localhost:3333/alunos');
+                const resposta = await axios.get('http://18.231.177.78:3333/alunos');
                 setAlunos(resposta.data);
             } catch (error) {
                 console.error(error);
