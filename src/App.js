@@ -1,41 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
-// ... (other components imports)
+const AlunosList = () => {
+  const [alunos, setAlunos] = useState([]);
 
-const Api = () => {
-    const [alunos, setAlunos] = useState([]); // State to store API data
+  useEffect(() => {
+    const fetchAlunos = async () => {
+      try {
+        const response = await fetch('http://18.231.177.78:3333/alunos/');
+        const dados = await response.json();
+        setAlunos(dados);
+      } catch (error) {
+        console.error('Erro ao buscar alunos:', error);
+      }
+    };
 
-    useEffect(() => {
-        // Fetch data from the API on component mount
-        const fetchData = async () => {
-            try {
-                const resposta = await axios.get('http://18.231.177.78:3333/alunos');
-                setAlunos(resposta.data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
+    fetchAlunos();
+  }, []); 
 
-        fetchData();
-    }, []);
-
-    return (
-        <div className="App">
-            <h1>Lista de Alunos</h1>
-            {alunos.length > 0 ? (
-                <ul>
-                    {alunos.map((aluno) => (
-                        <li key={aluno.id}>
-                            {aluno.id} - {aluno.nome} - Pontos: {aluno.ponto}
-                        </li>
-                    ))}
-                </ul>
-            ) : (
-                <p>Não tem informações</p>
-            )}
-        </div>
-    );
+  return (
+    <div className='container'>
+      <h1>Lista de Alunos</h1>
+      <div>
+        {alunos.map(aluno => (
+          <div key={aluno.id} className="aluno">
+            <h3>{aluno.nome}</h3>
+            <p><strong>Ponto:</strong> {aluno.ponto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default Api;
+export default AlunosList;
