@@ -1,4 +1,3 @@
-/*até 600PX*/
 * {
   margin: 0;
   padding: 0;
@@ -37,45 +36,111 @@ body {
 }
 
 /* Estiliza cada aluno */
-.aluno {
+.aluno-resto-dos-alunos {
   margin: 15px 0;
   padding: 15px;
   border-radius: 5px;
 }
-.aluno>h3{
-  font-size: 30px;
-}
-.indice{
+
+.aluno-resto-dos-alunos>h3 {
   font-size: 30px;
 }
 
-/* Responsividade */
+.aluno-primeiros-tres {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.aluno-primeiros-tres>h3 {
+  font-size: 30px;
+}
+
+.indice {
+  font-size: 30px;
+}
+
+/* Responsividade para telas pequenas */
 @media (max-width: 600px) {
   .container {
     width: 90%;
   }
 }
 
-/*entre 601px e 1023px*/
-@media(min-width: 601px) and (max-width: 1023px){
-  .container{
+/* Responsividade para telas médias */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .primeiros-tres{
+
+  .primeiros-tres {
     display: flex;
-    padding-bottom: 100px;
     justify-content: space-around;
     width: 100%;
   }
-  .aluno{
-    flex: 1;
-    margin: 15px;
+
+  .aluno-resto-dos-alunos {
+    margin: 15px 0;
     padding: 15px;
     border-radius: 5px;
   }
-  .resto-dos-alunos{
+  
+  .aluno-resto-dos-alunos>h3 {
+    font-size: 30px;
+  }
+  
+  .aluno-primeiros-tres {
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .resto-dos-alunos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primeiros-tres {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .aluno-resto-dos-alunos {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  
+  .aluno-resto-dos-alunos>h3 {
+    font-size: 30px;
+    margin-top: -10px;
+  }
+  
+  .aluno-primeiros-tres {
+    margin: 15px 0;
+    padding: 65px;
+    border-radius: 5px;
+  }
+
+  .resto-dos-alunos {
     display: flex;
     flex-direction: column;
     align-items: center;
