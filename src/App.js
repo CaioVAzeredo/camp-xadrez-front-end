@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import ConsumoAPI from './componentes/consumoAPI';
+import EstilosGlobais from './componentes/EstilosGlobais';
 
 const AlunosList = () => {
-    const [alunos, setAlunos] = useState([]);
-
-    useEffect(() => {
-        const fetchAlunos = async () => {
-            try {
-                const response = await fetch('http://18.231.177.78:3333/alunos/');
-                const dados = await response.json();
-                setAlunos(dados);
-            } catch (error) {
-                console.error('Erro ao buscar alunos:', error);
-            }
-        };
-
-        fetchAlunos();
-    }, []);
-
+   const alunos = ConsumoAPI();
+   
     return (
         
         <div className='container'>

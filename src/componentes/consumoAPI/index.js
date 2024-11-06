@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import style from "styled-components"
 
-const AlunosList = () => {
+const ConsumoAPI = () => {
     const [alunos, setAlunos] = useState([]);
-
     useEffect(() => {
         const fetchAlunos = async () => {
             try {
@@ -17,9 +17,8 @@ const AlunosList = () => {
         fetchAlunos();
     }, []);
 
-    return (
-        useEffect()
-    );
-};
 
-export default AlunosList;
+    return alunos;
+}
+
+export default ConsumoAPI

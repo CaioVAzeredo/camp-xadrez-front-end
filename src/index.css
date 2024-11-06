@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,27 +16,27 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 /* Centraliza a tela inteira */
-html,
+/* html,
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-}
+} */
 
 /* Estiliza o container principal */
-.container {
+/* .container {
   text-align: center;
   width: 100%;
   max-width: 100%;
   padding: 20px;
-}
+} */
 
 /* Estiliza cada aluno */
-.aluno-resto-dos-alunos {
+/* .aluno-resto-dos-alunos {
   margin: 15px 0;
   padding: 15px;
   border-radius: 5px;
@@ -58,17 +58,17 @@ body {
 
 .indice {
   font-size: 30px;
-}
+} */
 
 /* Responsividade para telas pequenas */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .container {
     width: 90%;
   }
-}
+} */
 
 /* Responsividade para telas médias */
-@media (min-width: 601px) and (max-width: 1023px) {
+/* @media (min-width: 601px) and (max-width: 1023px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -146,4 +146,4 @@ body {
     align-items: center;
     width: 100%;
   }
-}
+} */
